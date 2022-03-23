@@ -1,0 +1,26 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Joke {
+  id: String!
+  value: String!
+  created_at: String!
+  icon_url: String!
+  updated_at: String!
+  url: String!
+  categories: [String!]!
+}
+
+type Query {
+  getJokeCats: [String!]!
+  getFavoriteJokes: [Joke!]!
+  getJoke: Joke!
+  getJokeByAmount(amount: Float!): [Joke!]!
+  getJokeByQuery(query: String!): [Joke!]!
+  getJokeByCat(catName: String!): Joke!
+}
+
+type Mutation {
+  addToFavorite(jokeId: String!): String!
+}
